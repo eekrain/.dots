@@ -20,7 +20,7 @@
 
   outputs = inputs @ { self, nixpkgs, flake-utils, ... }:
     let
-      user = "ruixi";
+      user = "eekrain";
       selfPkgs = import ./pkgs;
     in
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
