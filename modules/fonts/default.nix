@@ -4,12 +4,14 @@
   environment.systemPackages = with pkgs; [
     twemoji-color-font
   ];
+
   fonts = {
     fonts = with pkgs; [
+      open-sans
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      nerdfonts
+      (nerdfonts.override { fonts = [ "JetBrainsMono" "Iosevka" "Hack" ]; })
       twemoji-color-font
     ];
     fontconfig = {
